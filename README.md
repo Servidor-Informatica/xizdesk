@@ -195,7 +195,8 @@ Please ensure that you are running these commands from the root of the RustDesk 
 ## File Structure
 
 - **[libs/hbb_common](https://github.com/rustdesk/rustdesk/tree/master/libs/hbb_common)**: video codec, config, tcp/udp wrapper, protobuf, fs functions for file transfer, and some other utility functions
-- **[libs/scrap](https://github.com/rustdesk/rustdesk/tree/master/libs/scrap)**: screen capture
+- **[libs/scrap](https://github.com/rust
+- desk/rustdesk/tree/master/libs/scrap)**: screen capture
 - **[libs/enigo](https://github.com/rustdesk/rustdesk/tree/master/libs/enigo)**: platform specific keyboard/mouse control
 - **[src/ui](https://github.com/rustdesk/rustdesk/tree/master/src/ui)**: GUI
 - **[src/server](https://github.com/rustdesk/rustdesk/tree/master/src/server)**: audio/clipboard/input/video services, and network connections
@@ -214,3 +215,44 @@ Please ensure that you are running these commands from the root of the RustDesk 
 ![image](https://user-images.githubusercontent.com/71636191/113112857-3fbd5d80-923c-11eb-9836-768325faf906.png)
 
 ![image](https://user-images.githubusercontent.com/71636191/135385039-38fdbd72-379a-422d-b97f-33df71fb1cec.png)
+
+
+
+
+
+
+
+
+
+
+
+On your fork you just created go to “Settings -> Secrets and variables -> Actions”.
+
+Click “New repository secret”, for the name put RENDEZVOUS_SERVER, for the secret put xsuporte.servidorinformatica.com
+
+Click “Add secret”.
+
+Click “New repository secret”, for the name put RS_PUB_KEY, for the secret put thY4DJEaRQ4mWH2nRJF6ZlLP2Lt5u5fT0s83wx8ymQ8=
+
+Click “Add secret”.
+
+    Enable workflows
+
+On your fork you just created go to “Settings -> Actions -> General”.
+
+On the right, select “Allow all actions and reusable workflows”.
+
+Once workflows are enabled you can go to “Actions”.
+
+On the left, select “Flutter Nightly Build”. Then on the right, click “Enable workflow”.
+
+Finally you can click “Run workflow” to build the RustDesk clients for all of the supported platforms. Enable upload permissions for workflows
+
+On your fork you just created go to “Settings -> Actions -> General”.
+
+Scroll down and under Workflow permissions enable “Read and write permissions”. Download your built packages
+
+After the workflow is done running you can download the packages it built.
+
+Go to the main page of your fork, on the right click “Releases”. The packages you just built will show up under “Nightly”.
+
